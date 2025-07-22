@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "bootstrap_5_webapp/wsgi.py",
+      "src": "app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "bootstrap_5_webapp/wsgi.py"
+      "dest": "app.py"
     }
   ]
 }
