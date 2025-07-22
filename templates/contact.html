@@ -1,3 +1,156 @@
 {% extends "base.html" %}
 
-{% block content %}{% endblock content %}
+{% block title %}ติดต่อเรา - เว็บแอป Jirasak{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold mb-3">ติดต่อเรา</h1>
+        <p class="lead">"Communication is the key to successful debugging"</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-lg-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body p-4">
+          <h3 class="mb-4">ส่งข้อความถึงเรา</h3>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">ชื่อ-นามสกุล</label>
+              <input type="text" class="form-control" id="name" placeholder="กรอกชื่อของคุณ">
+            </div>
+            
+            <div class="mb-3">
+              <label for="email" class="form-label">อีเมล</label>
+              <input type="email" class="form-control" id="email" placeholder="your.email@example.com">
+            </div>
+            
+            <div class="mb-3">
+              <label for="subject" class="form-label">หัวข้อ</label>
+              <select class="form-select" id="subject">
+                <option selected>เลือกหัวข้อที่ต้องการติดต่อ</option>
+                <option value="general">สอบถามทั่วไป</option>
+                <option value="bug">รายงานข้อผิดพลาด</option>
+                <option value="feature">ขอฟีเจอร์ใหม่</option>
+                <option value="feedback">ความคิดเห็น</option>
+                <option value="other">อื่น ๆ</option>
+              </select>
+            </div>
+            
+            <div class="mb-4">
+              <label for="message" class="form-label">ข้อความ</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="เขียนข้อความที่ต้องการส่งถึงเรา..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg w-100">
+              <i class="bi bi-send-fill me-2"></i>ส่งข้อความ
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body p-4">
+          <h3 class="mb-4">ข้อมูลการติดต่อ</h3>
+          
+          <div class="contact-info mb-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="contact-icon me-3">
+                <i class="bi bi-person-circle text-primary fs-2"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">นักพัฒนา</h5>
+                <p class="mb-0 text-muted">นายจิรศักดิ์ ทองพิระ</p>
+              </div>
+            </div>
+            
+            <div class="d-flex align-items-center mb-3">
+              <div class="contact-icon me-3">
+                <i class="bi bi-envelope-fill text-primary fs-2"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">อีเมล</h5>
+                <p class="mb-0 text-muted">jirasak.dev@example.com</p>
+              </div>
+            </div>
+            
+            <div class="d-flex align-items-center mb-3">
+              <div class="contact-icon me-3">
+                <i class="bi bi-github text-primary fs-2"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">GitHub</h5>
+                <p class="mb-0 text-muted">github.com/jirasak-dev</p>
+              </div>
+            </div>
+            
+            <div class="d-flex align-items-center mb-4">
+              <div class="contact-icon me-3">
+                <i class="bi bi-clock-fill text-primary fs-2"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">เวลาตอบกลับ</h5>
+                <p class="mb-0 text-muted">ภายใน 24-48 ชั่วโมง</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-light p-4 rounded">
+            <h5 class="mb-3">คำคมประจำใจ</h5>
+            <blockquote class="blockquote">
+              <p class="mb-2"><em>"There are only two kinds of languages: the ones people complain about and the ones nobody uses."</em></p>
+              <footer class="blockquote-footer">Bjarne Stroustrup</footer>
+            </blockquote>
+            
+            <hr class="my-3">
+            
+            <div class="text-center">
+              <p class="mb-2"><strong>"มีปัญหาใดให้แจ้งมา แต่ถ้าไม่มี Bug ให้หาด้วย"</strong></p>
+              <small class="text-muted">- Every Developer Ever</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-5">
+    <div class="col-12">
+      <div class="text-center p-5 bg-light rounded">
+        <h3 class="mb-3">FAQ - คำถามที่พบบ่อย</h3>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="faq-item">
+              <i class="bi bi-question-circle-fill text-primary fs-1 mb-3"></i>
+              <h5>ใช้เทคโนโลยีอะไรสร้าง?</h5>
+              <p class="small text-muted">Bootstrap 5 + Django Framework</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="faq-item">
+              <i class="bi bi-bug-fill text-primary fs-1 mb-3"></i>
+              <h5>เจอ Bug ต้องทำไง?</h5>
+              <p class="small text-muted">รายงานมาเลย จะรีบแก้ให้</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="faq-item">
+              <i class="bi bi-heart-fill text-primary fs-1 mb-3"></i>
+              <h5>ชอบงานนี้มั้ย?</h5>
+              <p class="small text-muted">ขอบคุณที่เข้ามาชม!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
