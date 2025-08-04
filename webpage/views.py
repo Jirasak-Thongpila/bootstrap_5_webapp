@@ -14,4 +14,5 @@ def contact(request):
 def for_view(request):
     context = {}
     context['count'] = list(range(1, 11)) 
-    return render(request, 'for.html', context)
+    context['message'] = "การวนซ้ำใน_Django"
+    return render(request, 'for.html',context)
