@@ -13,6 +13,12 @@ def contact(request):
 
 def for_view(request):
     context = {}
-    context['count'] = list(range(1, 11)) 
     context['message'] = "การวนซ้ำใน_Django"
+    
+    if request.method == 'POST' and request.POST.get('count') != '':
+        number = int(request.POST.get('count'))
+        context['count'] = list(range(1,number +1))
+    else:
+        context['count'] = list(range(1, 2))
+        
     return render(request, 'for.html',context)
