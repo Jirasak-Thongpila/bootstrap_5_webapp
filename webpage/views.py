@@ -12,4 +12,6 @@ def contact(request):
     return render(request, 'contact.html')
 
 def for_view(request):
-    return render(request, 'for.html')
+    context = {}
+    context['count'] = list(range(1, 11)) 
+    return render(request, 'for.html', context)
