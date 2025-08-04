@@ -118,7 +118,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'statics'),]
+STATIC_ROOT = Path.joinpath(BASE_DIR, 'staticfiles_build')
 
 # ลบ STATICFILES_DIRS ออกก่อน เพราะไม่มี folder static
 # STATICFILES_DIRS = [

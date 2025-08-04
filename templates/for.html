@@ -1,4 +1,17 @@
 {% extends "base.html" %} {% block content %}
+<div class="card mb-4">
+  <div class="card-body">
+    <form method="post" action="{% url 'for' %}">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="numberInput" class="form-label">ป้อนตัวเลขที่ต้องการ</label>
+        <input type="number" class="form-control" id="count" name="count" />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  </form>
+</div>
+
 <div class="card">
   <div class="card-header">
     <h2 class="mb-0">{{ message }}</h2>
