@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Install pip first
 echo "Installing pip..."
 python3.9 -m ensurepip --upgrade
