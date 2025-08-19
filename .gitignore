@@ -211,3 +211,5 @@ __marimo__/
 makemigra.bat
 run.bat
 .claude
+makemigra_dev.bat
+run_dev.bat
