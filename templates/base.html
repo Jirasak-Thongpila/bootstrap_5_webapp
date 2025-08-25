@@ -18,77 +18,77 @@
         --link-color: #8B4513;
         --button-color: #CD853F;
       }
-      
+
       body {
         background-color: var(--bg-color) !important;
         color: var(--text-color) !important;
       }
-      
+
       .navbar-brand {
         color: white !important;
       }
-      
+
       .nav-link {
         color: white !important;
       }
-      
+
       .nav-link:hover {
         color: var(--bg-color) !important;
       }
-      
+
       .btn-primary {
         background-color: var(--button-color) !important;
         border-color: var(--button-color) !important;
         color: white !important;
       }
-      
+
       .btn-primary:hover {
         background-color: var(--link-color) !important;
         border-color: var(--link-color) !important;
       }
-      
+
       .text-primary {
         color: var(--link-color) !important;
       }
-      
+
       .bg-primary {
         background-color: var(--link-color) !important;
       }
-      
+
       .bg-primary h4, .bg-primary h2 {
         color: var(--bg-color) !important;
       }
-      
+
       .bg-primary small {
         color: var(--bg-color) !important;
         opacity: 0.9;
       }
-      
+
       a {
         color: var(--link-color) !important;
       }
-      
+
       a:hover {
         color: var(--button-color) !important;
       }
-      
+
       .card {
         background-color: white !important;
         border: 1px solid #dee2e6;
       }
-      
+
       .hero-section {
         background-color: var(--link-color) !important;
       }
-      
+
       h1, h2, h3, h4, h5, h6 {
         color: var(--text-color) !important;
       }
-      
+
       .hero-section h1 {
         color: white !important;
       }
-      
+
       .hero-section p {
         color: white !important;
       }
@@ -101,19 +101,19 @@
           <i class="bi bi-bootstrap-fill me-2"></i>
           เว็บแอป Jirasak
         </a>
-        
-        <button 
-          class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav" 
-          aria-expanded="false" 
+          aria-controls="navbarNav"
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -139,6 +139,11 @@
             <li class="nav-item">
               <a class="nav-link text-white fw-semibold" href="{% url "contact" %}">
                 <i class="bi bi-envelope-fill me-1"></i>ติดต่อเรา
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-semibold" href="{% url "student" %}">
+                <i class="bi bi-envelope-fill me-1"></i>นักศึกษา
               </a>
             </li>
           </ul>
