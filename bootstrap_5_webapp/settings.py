@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-e$ng#=9+cf2r+s_p8uk3*+k$xuu1fqs(x#j@)_%s^16x*h55l-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # เปิด DEBUG เพื่อดู error
+DEBUG = True  # เปิด DEBUG เพื่อดู error
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -75,10 +79,36 @@ WSGI_APPLICATION = 'bootstrap_5_webapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# Use SQLite for development if Supabase connection fails
+# USE_SQLITE = os.environ.get('USE_SQLITE', 'False').lower() == 'true'
+#
+# if USE_SQLITE:
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.sqlite3',
+#            'NAME': BASE_DIR / 'db.sqlite3',
+#        }
+#    }
+# else:
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.postgresql',
+#            'NAME': os.environ.get('SUPABASE_DB_NAME', 'postgres'),
+#            'USER': os.environ.get('SUPABASE_DB_USER', 'postgres'),
+#            'PASSWORD': os.environ.get('SUPABASE_DB_PASSWORD', 'tT0613828245'),
+#            'HOST': os.environ.get('SUPABASE_DB_HOST', 'ifbbqowbocrqeoqmflgo.supabase.co'),
+#            'PORT': os.environ.get('SUPABASE_DB_PORT', '5432'),
+#        }
+#    }
+
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.ifbbqowbocrqeoqmflgo',
+        'PASSWORD': os.environ.get('SUPABASE_DB_PASSWORD', 'tT0613828245'),
+        'HOST': 'aws-1-ap-southeast-1.pooler.supabase.com',
+        'PORT': '5432',
     }
 }
 

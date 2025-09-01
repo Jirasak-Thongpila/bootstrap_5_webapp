@@ -9,7 +9,7 @@ PREFIX_CHOICES = [
 ]
 
 class Student(models.Model):
-  stid = models.IntegerField(unique=True)
+  stid = models.CharField(max_length= 10, unique=True)
   name_prefix = models.CharField(choices=PREFIX_CHOICES, max_length=10)
   first_name = models.CharField(max_length=50)
   last_name = models.CharField(max_length=50)
