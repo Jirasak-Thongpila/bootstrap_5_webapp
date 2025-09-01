@@ -45,7 +45,7 @@ def student(request):
     students = models.Student.objects.all()
     contaxt['students'] = students
 
-    return render(request, 'Student.html', contaxt)
+    return render(request, 'student.html', contaxt)
 
 def subjects(request):
     contaxt = {}
@@ -54,4 +54,4 @@ def subjects(request):
     subjects = models.Subjects.objects.all()
     contaxt['subjects'] = subjects
 
-    return render(request, 'Subject.html', contaxt)
+    return render(request, 'subject.html', contaxt)
