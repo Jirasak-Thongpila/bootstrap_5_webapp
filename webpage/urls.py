@@ -8,4 +8,5 @@ urlpatterns = [
     path('for/', views.for_view, name='for'),
     path('multipli/', views.multipli, name='multipli'),
     path('student/', views.student, name='student'),
+    path('subject/', views.subjects, name='subject'),
 ]

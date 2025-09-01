@@ -46,3 +46,12 @@ def student(request):
     contaxt['students'] = students
 
     return render(request, 'Student.html', contaxt)
+
+def subjects(request):
+    contaxt = {}
+    contaxt['title'] = "รายวิชา"
+
+    subjects = models.Subjects.objects.all()
+    contaxt['subjects'] = subjects
+
+    return render(request, 'Subject.html', contaxt)

@@ -17,3 +17,12 @@ class Student(models.Model):
 
   def __str__(self):
     return str(self.stid)
+
+class Subjects(models.Model):
+  sjid = models.CharField(max_length=10, unique=True)
+  subjects_name = models.CharField(max_length=50)
+  teacher_name = models.CharField(max_length=50)
+
+  def __str__(self):
+      return str(self.sjid)
+
